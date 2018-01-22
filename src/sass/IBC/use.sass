@@ -1,0 +1,281 @@
+.content-ibc
+	.use
+		background: #e8e8e8
+		position: relative
+		padding-top: 60px
+		+r(640)
+			padding: 40px 20px
+		&:after
+			content: ''
+			background: url('../img/ibc-landing-svg/consist-bg.svg') no-repeat
+			background-size: cover
+			width: 101%
+			height: 100px
+			position: absolute
+			left: 0
+			top: -10px
+			z-index: 1
+		.up
+			background: #f64869
+			padding: 15px 25px
+			color: #fff
+			margin-bottom: 30px
+			margin-right: 25px
+			position: absolute
+			left: 0
+			top: 40px
+			z-index: 5
+			font-size: 16px
+			font-weight: 600
+			letter-spacing: 3px
+			+r(640)
+				font-size: 24px
+		&__pagination
+			position: absolute
+			right: 10px
+			top: 200px
+			display: none
+			flex-direction: column
+			+r(640)
+				display: flex
+			span
+				border-radius: 50%
+				width: 50px
+				height: 50px
+				font-size: 24px
+				color: #333333
+				background: #ffffff
+				display: flex
+				justify-content: center
+				align-items: center
+				padding-top: 2px
+				margin-bottom: 40px
+				&.active
+					background: #ff3366
+					color: #ffffff
+		a.mobile
+			font-size: 18px
+			font-weight: 600
+			color: $greeny-blue
+			display: block
+			cursor: pointer
+			letter-spacing: 1.8px
+			text-transform: uppercase
+			position: relative
+			transition: all 0.3s
+			display: none
+			padding-left: 100px
+			padding-bottom: 50px
+			padding-top: 40px
+			+r(640)
+				display: block
+				font-size: 24px
+			span
+				position: absolute
+				left: 0
+				top: 30px
+				width: 75px
+				height: 75px
+				border-radius: 50%
+				padding: 5px
+				background-image: linear-gradient(to right, $greeny-blue 37%, #29413b)
+				transition: all 0.3s
+				background-size: 200% 200%
+				animation: Gradient 5s ease infinite
+		h2
+			font-size: 24px
+			font-weight: 500
+			padding-bottom: 40px
+			position: relative
+			z-index: 3
+			+r(640)
+				font-size: 30px
+			a
+				font-size: 18px
+				font-weight: 600
+				color: $greeny-blue
+				display: block
+				cursor: pointer
+				letter-spacing: 1.8px
+				text-transform: uppercase
+				position: relative
+				transition: all 0.3s
+				position: absolute
+				right: 30px
+				top: -8px
+				transition: all 0.3s
+				+r(640)
+					display: none
+				&:hover
+					color: $dark-grey-blue-two
+				span
+					position: absolute
+					top: -15px
+					left: -100px
+					width: 75px
+					height: 75px
+					border-radius: 50%
+					padding: 5px
+					background-image: linear-gradient(to right, $greeny-blue 37%, #29413b)
+					transition: all 0.3s
+					background-size: 200% 200%
+					animation: Gradient 5s ease infinite
+		.swiper-container
+			+r(640)
+				margin-right: 30px
+		&__block
+			display: flex
+			flex-direction: column
+			align-items: center
+			position: relative
+			z-index: 1
+			&--1
+				p:first-child
+					background: #f64869
+					padding: 15px 20px
+					width: auto
+					color: #fff
+					margin-bottom: 30px
+					margin-right: 25px
+					position: absolute
+					left: 0px
+					top: 15px
+					z-index: 5
+					font-size: 16px
+					font-weight: 600
+					letter-spacing: 3px
+				.use__block__foto
+					span
+						width: 45px
+						height: 45px
+						border-radius: 100px
+						background: #fff
+						font-size: 24px
+						font-weight: 500
+						position: absolute
+						box-sizing: border-box
+						display: flex
+						justify-content: center
+						align-items: center
+						left: 70px
+						bottom: 30px
+
+			&__foto
+				min-height: 400px
+				position: relative
+				+r(640)
+					min-height: auto
+					width: 90%
+					padding-bottom: 20px
+				&--span
+					span
+						left: 25px !important
+						top: 380px !important
+				span
+					width: 45px
+					height: 45px
+					border-radius: 100px
+					background: #fff
+					font-size: 24px
+					font-weight: 500
+					position: absolute
+					box-sizing: border-box
+					display: flex
+					justify-content: center
+					align-items: center
+					left: 70px
+					bottom: 30px
+					+r(640)
+						top: 330px
+						left: 10px
+						bottom: auto
+				img
+					width: auto
+					min-height: 350px
+					+r(640)
+						min-height: auto
+						width: 107%
+			p
+				font-weight: 600
+				font-size: 16px
+				width: 250px
+				margin-top: -25px
+				padding-bottom: 30px
+				br
+					display: inline-block
+					+r(640)
+						display: none
+				+r(640)
+					margin-top: 0
+					font-size: 24px
+					width: 93%
+					margin-left: 40px
+					font-weight: 400
+				span
+					color: #524b3b
+					+r(640)
+							display: block
+					br
+						display: none
+						+r(640)
+							display: inline-block
+		&__advice
+			border: 1px dashed #2e6b67
+			padding: 15px 30px
+			p
+				font-style: italic
+				font-size: 16px
+				font-weight: 500
+				color: #999999
+				+r(640)
+					font-size: 24px
+				b
+					font-weight: 500
+					color: #2e6b67
+		&__recommendation
+			padding-top: 40px
+			&__block
+				p
+					font-weight: 600
+					font-size: 16px
+					display: inline-block
+					color: #524b3b
+					+r(640)
+						font-size: 24px
+						font-weight: 400
+					&:first-child
+						background: #f64869
+						padding: 15px 23px
+						color: #fff
+						margin-bottom: 30px
+						margin-right: 25px
+						line-height: 1.5
+						letter-spacing: 2.4px
+					&:last-child
+						+r(640)
+							display: block
+							padding-bottom: 30px
+				&--last
+					position: relative
+					z-index: 5
+					p
+						color: #000
+						&:first-child
+							border: 1px dashed #f64869
+							padding: 15px 23px
+							color: #f64869
+							margin-bottom: 30px
+							margin-right: 25px
+							background: none
+
+
+
+
+
+
+
+
+
+
+
+

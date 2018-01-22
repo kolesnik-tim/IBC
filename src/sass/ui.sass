@@ -1,0 +1,256 @@
+@import helpers/colors
+@import helpers/mixins
+
++rmin(641)
+	.hidden-sm
+		display: none !important
+
++r(640)
+	.hidden-xs
+		display: none !important
+
+body
+	font-family: 'Proxima Nova'
+	overflow-x: hidden !important
+	&.is-open
+		overflow: hidden !important
+
+.container
+	max-width: 1200px
+	width: 100%
+	position: relative
+	height: 100%
+	box-sizing: border-box
+	+r(640)
+		padding: 0 40px
+
+.row
+	height: 100%
+
+
+h2
+	font-size: 24px
+	font-weight: 600
+	letter-spacing: 1.8px
+	color: $black-two
+	text-transform: uppercase
+
+.btn
+	text-decoration: none
+	border: 1px solid #ffffff
+	background: transparent
+	color: #ffffff
+	padding: 15px 40px
+	height: 100%
+	letter-spacing: 1.6px
+	font-weight: 600
+	text-align: center
+	cursor: pointer
+	transition: all 0.3s
+	text-transform: lowercase
+	&:hover
+		background: #ffffff
+		color: $dark-grey-blue-two
+	&--white
+		background: #ffffff
+		width: 170px
+		color: $dark-grey-blue-two
+		margin-right: 15px
+		&:hover
+			background: $dark-grey-blue-two
+			color: #ffffff
+			border-color: $dark-grey-blue-two
+	&--thank
+		display: inline-block
+		color: $dark-grey-blue-two
+		border: solid 2px $dark-grey-blue-two
+		&:hover
+			background: $dark-grey-blue-two
+			color: #ffffff
+			border-color: $dark-grey-blue-two
+	&--contact
+		margin-top: 80px
+		background: #ffffff
+		color: $dark-grey-blue-two
+		font-size: 24px
+		display: block
+		padding: 22px
+		height: 80px
+		width: 395px
+		position: relative
+		left: 50%
+		transform: translateX(-50%)
+		
+
+
+.social
+	position: fixed
+	max-width: 1200px
+	width: 100%
+	left: 50%
+	transform: translateX(-50%)
+	bottom: 70px
+	display: flex
+	z-index: 10
+	svg
+		width: 32px
+		height: 32px
+		fill: #fff
+		margin-right: 10px
+		transition: fill 0.3s
+		&:hover
+			fill: $dark-grey-blue-two
+
+
+@keyframes Gradient
+	0%
+		background-position: 0% 50%
+
+	50%
+		background-position: 100% 50%
+
+	100%
+		background-position: 0% 50%
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	display: none
+	-webkit-appearance: none
+	margin: 0
+
+
+.checkbox
+	&.invalid
+		+ .label
+			&:before
+				border: 1px solid red
+			+ .label-for
+				color: red
+				a
+					color: red
+	vertical-align: top
+	width: 25px
+	height: 25px
+	margin-bottom: 175px
+	+ .label
+		cursor: pointer
+	&:not(checked)
+		position: absolute
+		opacity: 0
+		+ .label
+			position: relative
+			padding: 0 0 0 40px
+			&:before
+				content: ''
+				position: absolute
+				top: -4px
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				background: transparent
+				border: 1px solid $dark-grey-blue-two
+			&:after
+				content: ''
+				position: absolute
+				top: 5px
+				left: 8px
+				width: 15px
+				height: 9px
+				border: 3px solid #ffffff
+				border-top: none
+				border-right: none
+				transform: rotate(-45deg)
+				transition: all .2s
+				opacity: 0
+				background: transparent !important
+	&:checked 
+		+ .label
+			&:before
+				background: $dark-grey-blue-two
+			&:after
+				opacity: 1
+			+ .label-for
+					h3, p
+						color: $dark-grey-blue-two
+.label-for
+	font-size: 16px
+	color: $black
+	a
+		color: $black
+.label-for
+	display: inline-block
+	cursor: pointer
+	position: relative
+	top: 2px
+	h3
+		font-size: 18px
+		font-weight: 600
+		margin-bottom: 10px
+	img
+		width: 45px
+		margin-right: 15px	
+
+
+
+
+
+
+
+
+
+
+
+
+#preloader
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: #ffffff
+	z-index: 1000
+	.svg-wrapper
+		height: 150px
+		margin: 0 auto
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+		width: 150px
+	.animate
+		fill: transparent
+		stroke-dasharray: 300
+		stroke-dashoffset: 600
+		stroke-width: 5px
+		stroke: #2d6965
+	svg
+		width: 150px
+		height: 150px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		transition: all 0.3s
+		path, line, polyline
+			stroke: #000
+			stroke-width: 2px
+			transition: all 0.3s
+		path
+			fill: transparent
+
+
+
+//Ленивая загрузка
+img
+	opacity: 1
+	transition: opacity 0.3s
+	&[data-src]
+		opacity: 0
+
+
+
+input, select
+	-webkit-appearance: none
